@@ -123,3 +123,31 @@
 # int_as_float = float(number)
 # print(type(int_as_float))
 # print(int_as_float)
+
+
+#String methods
+new_string = "This is a sample string for demonstrating string methods."
+print(new_string.upper())
+print(new_string.lower())
+print(new_string.title())
+print(new_string.capitalize())
+print(new_string.replace("sample", "example"))
+print(new_string.find("for"))
+print(new_string.startswith("This"))
+print(new_string.endswith("method."))
+print("================")
+new_string = "   This is a sample string for demonstrating string methods.   "
+print(new_string.split(" "))
+print(new_string.strip()) # Remove leading and trailing whitespace characters.
+print(new_string.lstrip()) # Remove leading whitespace characters.
+print(new_string.rstrip()) # Remove trailing whitespace characters.
+
+print(new_string.count("s")) # Count the number of occurrences of the substring "s" in the string. This will count both uppercase and lowercase "s" characters.
+print(new_string.isalpha()) # Every character is a letter (A-Z). No numbers, spaces, or symbols.
+print(new_string.isdigit()) # Every character is a digit (0-9). No letters, spaces, or symbols.
+print(new_string.isalnum()) # Every character is either a letter or a digit. No spaces or symbols.
+print(new_string.islower()) # Every character is a lowercase letter (a-z). No uppercase letters, spaces, or symbols.
+print(new_string.isupper()) # Every character is an uppercase letter (A-Z). No lowercase letters, spaces, or symbols.
+print(new_string.istitle()) # Every word starts with an uppercase letter followed by lowercase letters. No numbers, spaces, or symbols.
+print(new_string.swapcase()) #Every character is a letter (A-Z). No numbers, spaces, or symbols.
+
