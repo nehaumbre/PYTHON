@@ -201,7 +201,28 @@
 # for i in range(1,15,2):
     # print("Iteration:", i) # This block will execute 7 times, with i taking values from 1 to 13, incrementing by 2 each time.
 
-word = "Python"
+# word = "Python"
 
-for char in word:
-    print("Character:", char.split(" ")) # This block will execute once for each character in the string "Python", printing each character on a new line.
+# for char in word:
+#     print("Character:", char.split(" ")) # This block will execute once for each character in the string "Python", printing each character on a new line.
+
+#while loop : runs as long as codition is true
+# count =0 
+# while count <= 5:
+#     print("count:", count)
+#     count += 1
+
+# passcode = ""
+# while len(passcode) != 8:
+#     passcode = input("Enter an 8-character passcode: ")
+# print("Passcode accepted:", passcode)
+
+# choice = None
+
+# while choice != "q":
+#     print("Option 1")
+#     print("Option 2")
+#     print("Option 3")
+#     choice = input("Choose an option: or enter 'q' to quit: ")
+
+# print("You chose to quit. Goodbye!")
