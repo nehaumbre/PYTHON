@@ -126,28 +126,54 @@
 
 
 #String methods
-new_string = "This is a sample string for demonstrating string methods."
-print(new_string.upper())
-print(new_string.lower())
-print(new_string.title())
-print(new_string.capitalize())
-print(new_string.replace("sample", "example"))
-print(new_string.find("for"))
-print(new_string.startswith("This"))
-print(new_string.endswith("method."))
-print("================")
-new_string = "   This is a sample string for demonstrating string methods.   "
-print(new_string.split(" "))
-print(new_string.strip()) # Remove leading and trailing whitespace characters.
-print(new_string.lstrip()) # Remove leading whitespace characters.
-print(new_string.rstrip()) # Remove trailing whitespace characters.
+# new_string = "This is a sample string for demonstrating string methods."
+# print(new_string.upper())
+# print(new_string.lower())
+# print(new_string.title())
+# print(new_string.capitalize())
+# print(new_string.replace("sample", "example"))
+# print(new_string.find("for"))
+# print(new_string.startswith("This"))
+# print(new_string.endswith("method."))
+# print("================")
+# new_string = "   This is a sample string for demonstrating string methods.   "
+# print(new_string.split(" "))
+# print(new_string.strip()) # Remove leading and trailing whitespace characters.
+# print(new_string.lstrip()) # Remove leading whitespace characters.
+# print(new_string.rstrip()) # Remove trailing whitespace characters.
 
-print(new_string.count("s")) # Count the number of occurrences of the substring "s" in the string. This will count both uppercase and lowercase "s" characters.
-print(new_string.isalpha()) # Every character is a letter (A-Z). No numbers, spaces, or symbols.
-print(new_string.isdigit()) # Every character is a digit (0-9). No letters, spaces, or symbols.
-print(new_string.isalnum()) # Every character is either a letter or a digit. No spaces or symbols.
-print(new_string.islower()) # Every character is a lowercase letter (a-z). No uppercase letters, spaces, or symbols.
-print(new_string.isupper()) # Every character is an uppercase letter (A-Z). No lowercase letters, spaces, or symbols.
-print(new_string.istitle()) # Every word starts with an uppercase letter followed by lowercase letters. No numbers, spaces, or symbols.
-print(new_string.swapcase()) #Every character is a letter (A-Z). No numbers, spaces, or symbols.
+# print(new_string.count("s")) # Count the number of occurrences of the substring "s" in the string. This will count both uppercase and lowercase "s" characters.
+# print(new_string.isalpha()) # Every character is a letter (A-Z). No numbers, spaces, or symbols.
+# print(new_string.isdigit()) # Every character is a digit (0-9). No letters, spaces, or symbols.
+# print(new_string.isalnum()) # Every character is either a letter or a digit. No spaces or symbols.
+# print(new_string.islower()) # Every character is a lowercase letter (a-z). No uppercase letters, spaces, or symbols.
+# print(new_string.isupper()) # Every character is an uppercase letter (A-Z). No lowercase letters, spaces, or symbols.
+# print(new_string.istitle()) # Every word starts with an uppercase letter followed by lowercase letters. No numbers, spaces, or symbols.
+# print(new_string.swapcase()) #Every character is a letter (A-Z). No numbers, spaces, or symbols.
 
+#Comparison operators
+# a = 10
+# b = 20
+# print("a:", a)
+# print("b:", b)
+
+# print("is a equal to b?",a == b) # Equal to
+# print("is a not equal to b?",a != b) # Not equal to
+# print("is a greater than b?",a > b) # Greater than
+# print("is a less than b?",a < b) # Less than
+# print("is a greater than or equal to b?",a >= b) # Greater than or equal to
+# print("is a less than or equal to b?",a <= b) # Less than or equal to
+# print("is a the same object as b?",a is b) # Identity operator: checks if a and b refer to the same object in memory.
+# print("is a not the same object as b?",a is not b) # Identity operator: checks if a and b do not refer to
+
+#Logical operators
+g = True
+h = False
+
+print("g:", g)
+print("h:", h)
+
+print("g and h:", g and h) # Logical AND: True if both g and h are True, otherwise False.
+print("g or h:", g or h) # Logical OR: True if at least one
+print("not g:", not g) # Logical NOT: True if g is False, and False if g is True.
+print("not h:", not h) # Logical NOT: True if h is False, and False if h is True.
