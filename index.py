@@ -1,4 +1,4 @@
-print("Hello World")
+# print("Hello World")
 # this is a comment
 # variables
 # age =30
@@ -92,3 +92,34 @@ print("Hello World")
 # print(text_with_backslash)
 
 #booleans
+# x = True
+# y = False
+# location = "New York"
+# number = 42
+# another_number = 3.14
+ 
+
+# print(type(x))
+# print(type(location))
+# print(type(number))
+# print(type(another_number))
+
+#TypeCasting: converting one data type to another
+# number_as_string = str(number)
+# print(type(number_as_string))
+# print(number_as_string)
+# string_as_number = int("44")
+# print(type(string_as_number))
+# print(string_as_number)
+# float_as_string = str(another_number)
+# print(type(float_as_string))
+# print(float_as_string)
+# string_as_float = float("4.25")
+# print(type(string_as_float))
+# print(string_as_float)
+# float_as_int = int(another_number)
+# print(type(float_as_int))
+# print(float_as_int)
+# int_as_float = float(number)
+# print(type(int_as_float))
+# print(int_as_float)
