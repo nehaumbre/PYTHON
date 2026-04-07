@@ -167,13 +167,41 @@
 # print("is a not the same object as b?",a is not b) # Identity operator: checks if a and b do not refer to
 
 #Logical operators
-g = True
-h = False
+# g = True
+# h = False
 
-print("g:", g)
-print("h:", h)
+# print("g:", g)
+# print("h:", h)
 
-print("g and h:", g and h) # Logical AND: True if both g and h are True, otherwise False.
-print("g or h:", g or h) # Logical OR: True if at least one
-print("not g:", not g) # Logical NOT: True if g is False, and False if g is True.
-print("not h:", not h) # Logical NOT: True if h is False, and False if h is True.
+# print("g and h:", g and h) # Logical AND: True if both g and h are True, otherwise False.
+# print("g or h:", g or h) # Logical OR: True if at least one
+# print("not g:", not g) # Logical NOT: True if g is False, and False if g is True.
+# print("not h:", not h) # Logical NOT: True if h is False, and False if h is True.
+
+
+
+#conditional statements
+
+# c = -1
+
+# if c> 10:
+#     print("c is greater than 10") # This block will execute if the condition is true.
+# elif c<10:
+#     print("c is less than 10") # This block will execute if the previous condition is false and this condition is true.
+# else:
+#     print("c is equal to 10") # This block will execute if all previous conditions are false.
+
+#Loops
+# for i in range(5):
+#     print("Iteration:", i) # This block will execute 5 times, with i taking values from 0 to 4.
+
+# for i in range(3, 6):
+#     print("Iteration:", i) # This block will execute 3 times, with i taking values from 3 to 5.
+
+# for i in range(1,15,2):
+    # print("Iteration:", i) # This block will execute 7 times, with i taking values from 1 to 13, incrementing by 2 each time.
+
+word = "Python"
+
+for char in word:
+    print("Character:", char.split(" ")) # This block will execute once for each character in the string "Python", printing each character on a new line.
