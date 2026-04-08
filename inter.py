@@ -117,3 +117,53 @@
 # copied_list = original_list.copy()
 # print("Original list:", original_list)
 # print("Copied list:", copied_list)
+
+# #iterating over a list (for --- in --)
+# myWebtoonReadList = ["Greatest Estate Developer", "The Villainess Reverses the Hourglass", "Solo Leveling", "The Villainess is a Marionette", "Lookism"]
+# for webtoon in myWebtoonReadList:
+#     print("I am currently reading:", webtoon)
+
+# #for element in range(start, stop, step):
+# for webtoon in range(len(myWebtoonReadList)):
+#     print(f"Reading:{webtoon} ", myWebtoonReadList[webtoon])
+
+# print("Using range with a step of 2:")
+# for webtoon in range(0,len(myWebtoonReadList),2):
+#     print(f"Reading:{webtoon} ", myWebtoonReadList[webtoon])
+
+# integers = [1, 2, 3, 4, 5]
+# i =0
+# #WHILE LOOP
+
+# while i < len(integers):
+#     print("Current integer:", integers[i])
+#     i += 1
+
+# # in operator
+# sentence = "Once upon a time in a land far, far away..."
+# print("Is 'time' in the sentence? " + sentence + ": " + str('time' in sentence))
+# print("Is 'lime' in the sentence? " + sentence + ": " + str('lime' in sentence))
+
+# side_dishes = ["salad", "fries", "mashed potatoes", "steamed vegetables"]
+# print(side_dishes)
+# print("Is 'fries' in the side dishes? " + str('fries' in side_dishes))
+# print("Is 'rice' in the side dishes? " + str('rice' in side_dishes))
+
+
+#list unpacking: splits the elements of a list into separate variables.
+
+myBookList = ["The Great Gatsby", "To Kill a Mockingbird", "1984"]
+
+book1, book2, book3 = myBookList
+print("Book 1:", book1)
+print("Book 2:", book2)
+print("Book 3:", book3)
+
+print("Using asterisk (*) to unpack remaining items into a list:")
+groceries = ["milk", "bread", "eggs", "cheese", "fruits", "vegetables"]
+scan1 , scan2, *rest = groceries
+print("Scan 1:", scan1)
+print("Scan 2:", scan2)
+print("Rest:", rest)
+
+
