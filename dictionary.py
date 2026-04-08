@@ -107,3 +107,63 @@
 # }
 # for city, country in Cities_and_countries.items():
 #     print(f"{city} is in {country}")
+
+#============================================================
+#adding a new key-value pair to a dictionary:
+my_dict = {"name": "Alice", "age": 30}
+my_dict["height"] = 155
+print(my_dict)
+
+#modify the value of an existing key:
+my_dict["name"] = "John"
+print(my_dict)
+
+#remove a key-value pair from a dictionary:
+del my_dict["height"]
+print(my_dict)
+
+#updating a dictionary with another dictionary:
+additional_info = {"age": 35, "city": "New York", "occupation": "Engineer"}
+my_dict.update(additional_info)
+print(my_dict)
+
+#updating a dictionary with keyword arguments:
+my_dict.update(country="USA", hobby="painting")
+print(my_dict)
+
+#using setdefault to add default values
+#setdefault() method returns the value of the specified key.
+# If the key does not exist, it inserts the key with the specified value.
+my_dict.setdefault("location", "unknown")   
+print(my_dict)
+
+# Scenario A: Key is missing
+user = {"name": "Alice"}
+user.setdefault("location", "unknown")
+print(user) 
+# Output: {'name': 'Alice', 'location': 'unknown'}
+
+# Scenario B: Key already exists
+user = {"name": "Bob", "location": "New York"}
+user.setdefault("location", "unknown")
+print(user) 
+# Output: {'name': 'Bob', 'location': 'New York'} (It didn't change to unknown!)
+
+#deleting a key-value pair
+flowers = {"rose": "red", "sunflower": "yellow", "lily": "white"}
+del flowers["rose"]
+print(flowers)
+
+#pop
+removed_flower = flowers.pop("lily")
+print("Removed flower:", removed_flower)
+print(flowers)
+
+#popitem() method removes and returns the last inserted key-value pair as a tuple.
+removed_flower = flowers.popitem()
+print("Removed flower:", removed_flower)
+print(flowers)
+
+plants = {"cactus": "green", "fern": "green", "orchid": "purple"}
+plants.clear()     # This will remove all key-value pairs from the dictionary
+print(plants)
