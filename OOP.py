@@ -279,3 +279,9 @@ print(person.get_age())
 print(person.get_gender())
 person.set_gender("F")
 print(person.get_gender())
+
+print(person._Person__age)
+print(person._Person__gender)
+
+person.set_age(-1)
+person.set_gender('A')
