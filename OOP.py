@@ -132,58 +132,113 @@
 #Method Over Loading: different methods with 
 # the same name but different parameters
 # Also called Compile Time Polymorphism/ Static Polymorphism
-class MathOperations:
-    def multiply(self,x,y):
-        return x * y
-    def multiply(self,x,y,z):
-        return x * y * z
+# class MathOperations:
+#     def multiply(self,x,y):
+#         return x * y
+#     def multiply(self,x,y,z):
+#         return x * y * z
 
-multiply = MathOperations()
-# print(multiply.multiply(2,3)) #error: multiply() missing 1 required positional argument: 'z'
-print(multiply.multiply(2,3,4)) 
+# multiply = MathOperations()
+# # print(multiply.multiply(2,3)) #error: multiply() missing 1 required positional argument: 'z'
+# print(multiply.multiply(2,3,4)) 
 
-class Cal():
-    def add(self,a,b= None):
-        if b is None:
-            return a
-        else:
-            return a + b
+# class Cal():
+#     def add(self,a,b= None):
+#         if b is None:
+#             return a
+#         else:
+#             return a + b
 
-cal = Cal()
-print(cal.add(2))
-print(cal.add(2,3))
+# cal = Cal()
+# print(cal.add(2))
+# print(cal.add(2,3))
 
-#Duck Typing
-# Duck typing is a programming technique 
-# where the type of an object is less 
-# important than the methods it provides
+# #Duck Typing
+# # Duck typing is a programming technique 
+# # where the type of an object is less 
+# # important than the methods it provides
 
-class Dog:
-    def speak(self):
-        print("Woof!")
+# class Dog:
+#     def speak(self):
+#         print("Woof!")
 
-class Parrot:
-    def speak(self):
-        print("Squeak!")
+# class Parrot:
+#     def speak(self):
+#         print("Squeak!")
 
-class Duck:
-    def speak(self):
-        print("Quack!")
+# class Duck:
+#     def speak(self):
+#         print("Quack!")
 
-class Gorilla:
-    def walk(self):
-        print("Gorilla is walking")
+# class Gorilla:
+#     def walk(self):
+#         print("Gorilla is walking")
 
-dog = Dog()
-parrot = Parrot()
-duck = Duck()
-gorilla = Gorilla()
+# dog = Dog()
+# parrot = Parrot()
+# duck = Duck()
+# gorilla = Gorilla()
 
-#function that accepts any object with speak method
-def make_sound(animal):
-    return animal.speak()
+# #function that accepts any object with speak method
+# def make_sound(animal):
+#     return animal.speak()
 
-make_sound(dog)
-make_sound(parrot)
-make_sound(duck)
-# make_sound(gorilla) #error: gorilla has no attribute 'speak'
+# make_sound(dog)
+# make_sound(parrot)
+# make_sound(duck)
+# # make_sound(gorilla) #error: gorilla has no attribute 'speak'
+
+
+#Encapsulation: Hiding internal details and 
+# exposing only the necessary interface
+
+#Public modifier
+# class MyClass:
+#     def __init__(self,x):
+#         #Public attribute
+#         self.x = x
+#     # public method
+#     def get_x(self):
+#         return self.x
+    
+# obj = MyClass(5)
+# print(obj.get_x())
+# print(obj.x)
+
+#Protected modifier: not intended to be accesed from outside the class 
+#but there is no strict enforcement of this
+# class MyClass:
+#     def __init__(self,x):
+#         #protected attribute
+#         self._x = x
+
+#     #protected method    
+#     def get_x(self):
+#         return self._x
+    
+# obj = MyClass(6)
+# print(obj.get_x())
+# print(obj._x)
+
+
+# class MyClass:
+#     def __init__(self,x):
+#         #private attribute
+#         self.__x = x
+
+#     #private method    
+#     def get_x(self):
+#         return self.__x
+
+# obj = MyClass(7)
+# print(obj.get_x())
+
+# #accessing private attribute
+# print(obj._MyClass__x) #name mangling
+
+#In Python, when you use a double underscore __, 
+# it triggers a process called Name Mangling.
+# Python internally renames the variable to 
+# _ClassName__VariableName to prevent it 
+# from being easily accessed or accidentally 
+# overridden by subclasses.
