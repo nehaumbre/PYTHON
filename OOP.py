@@ -242,3 +242,40 @@
 # _ClassName__VariableName to prevent it 
 # from being easily accessed or accidentally 
 # overridden by subclasses.
+
+
+#Encapsulation: Hiding internal details and 
+# exposing only the necessary interface
+
+class Person:
+    def __init__(self, name,age,gender):
+        self._name = name #protected attribute
+        self.__age = age #private attribute
+        self.__gender = gender #private attribute
+        
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self, age):
+        if age>0:
+            self.__age = age
+        else:
+            print("Age should be greater than 0")
+    
+    def get_gender(self):
+        return self.__gender
+    
+    def set_gender(self, gender):
+        if gender in ['M' ,'F', 'Other']:
+            self.__gender = gender
+        else:
+            print("Gender should be M, F, or Other")
+    
+person = Person("John", 5, "M")
+print(person.get_age())
+person.set_age(30)
+print(person.get_age())
+
+print(person.get_gender())
+person.set_gender("F")
+print(person.get_gender())
