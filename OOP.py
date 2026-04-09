@@ -72,53 +72,118 @@
 #===========================================================
 
 # Super/ Parent/ Base Class
-class Animal:
-    def __init__(self, animal_name):
-        self.animal_name = animal_name
+# class Animal:
+#     def __init__(self, animal_name):
+#         self.animal_name = animal_name
 
-    def animal_sound(self):
-        print(f"The animal {self.animal_name} makes a sound")
+#     def animal_sound(self):
+#         print(f"The animal {self.animal_name} makes a sound")
 
 
-# Sub/ Child/ Derived Class
-class Dog(Animal):
-    def bark(self):
-        print(f"The dog {self.animal_name} barks")
+# # Sub/ Child/ Derived Class
+# class Dog(Animal):
+#     def bark(self):
+#         print(f"The dog {self.animal_name} barks")
 
-dog1 = Dog("Buddy")
-dog1.animal_sound()
-dog1.bark()
+# dog1 = Dog("Buddy")
+# dog1.animal_sound()
+# dog1.bark()
 
-#Single inheritance: a child class inherits from a single parent class
-#Multiple inheritance: a child class inherits from multiple parent classes
+# #Single inheritance: a child class inherits from a single parent class
+# #Multiple inheritance: a child class inherits from multiple parent classes
 
-class Workout:
-    def __init__(self, workout_target_muscles, workout_duration):
-        self.workout_target_muscles = workout_target_muscles
-        self.workout_duration = workout_duration
-        print("Parent Constructor: ")
-        print(f"Workout Target Muscles: {self.workout_target_muscles}")
-        print(f"Workout Duration: {self.workout_duration}")
+# class Workout:
+#     def __init__(self, workout_target_muscles, workout_duration):
+#         self.workout_target_muscles = workout_target_muscles
+#         self.workout_duration = workout_duration
+#         print("Parent Constructor: ")
+#         print(f"Workout Target Muscles: {self.workout_target_muscles}")
+#         print(f"Workout Duration: {self.workout_duration}")
 
-class Upper_body(Workout):
-    #overiding the parent constructor
-    def __init__(self, workout_type):
-        self.workout_type = workout_type
-        print("Child Constructor: ")
-        print(f"Workout Type: {self.workout_type}")
-    def my_workout_type(self):
-        print(f"Workout Type==: {self.workout_type}")
+# class Upper_body(Workout):
+#     #overiding the parent constructor
+#     def __init__(self, workout_type):
+#         self.workout_type = workout_type
+#         print("Child Constructor: ")
+#         print(f"Workout Type: {self.workout_type}")
+#     def my_workout_type(self):
+#         print(f"Workout Type==: {self.workout_type}")
     
-upper_body_workout = Upper_body("Pushups")
-print(upper_body_workout.workout_type)
-upper_body_workout.my_workout_type()
+# upper_body_workout = Upper_body("Pushups")
+# print(upper_body_workout.workout_type)
+# upper_body_workout.my_workout_type()
 
-#using super keyword
-class Lower_body(Workout):
-    def __init__(self, workout_target_muscles, workout_duration):
-        super().__init__(workout_target_muscles, workout_duration)
-        print("Child Constructor: ")
-        print(f"Workout Target Muscles: {self.workout_target_muscles}")
-        print(f"Workout Duration: {self.workout_duration}")
+# #using super keyword
+# class Lower_body(Workout):
+#     def __init__(self, workout_target_muscles, workout_duration):
+#         super().__init__(workout_target_muscles, workout_duration)
+#         print("Child Constructor: ")
+#         print(f"Workout Target Muscles: {self.workout_target_muscles}")
+#         print(f"Workout Duration: {self.workout_duration}")
 
-lower_body_workout = Lower_body("Legs", "30 minutes")
+# lower_body_workout = Lower_body("Legs", "30 minutes")
+
+#polymorphism
+# Polymorphism refers to the ability of objects of
+#  different classes to respond to the same method
+#  call in different ways.
+# 
+
+#Method Over Loading: different methods with 
+# the same name but different parameters
+# Also called Compile Time Polymorphism/ Static Polymorphism
+class MathOperations:
+    def multiply(self,x,y):
+        return x * y
+    def multiply(self,x,y,z):
+        return x * y * z
+
+multiply = MathOperations()
+# print(multiply.multiply(2,3)) #error: multiply() missing 1 required positional argument: 'z'
+print(multiply.multiply(2,3,4)) 
+
+class Cal():
+    def add(self,a,b= None):
+        if b is None:
+            return a
+        else:
+            return a + b
+
+cal = Cal()
+print(cal.add(2))
+print(cal.add(2,3))
+
+#Duck Typing
+# Duck typing is a programming technique 
+# where the type of an object is less 
+# important than the methods it provides
+
+class Dog:
+    def speak(self):
+        print("Woof!")
+
+class Parrot:
+    def speak(self):
+        print("Squeak!")
+
+class Duck:
+    def speak(self):
+        print("Quack!")
+
+class Gorilla:
+    def walk(self):
+        print("Gorilla is walking")
+
+dog = Dog()
+parrot = Parrot()
+duck = Duck()
+gorilla = Gorilla()
+
+#function that accepts any object with speak method
+def make_sound(animal):
+    return animal.speak()
+
+make_sound(dog)
+make_sound(parrot)
+make_sound(duck)
+# make_sound(gorilla) #error: gorilla has no attribute 'speak'
