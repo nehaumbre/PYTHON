@@ -1,0 +1,8 @@
+An escape sequence is a combination of characters
+that represents a special character or command in a string. 
+It typically starts with a backslash (\) followed by one or more 
+characters. Escape sequences are used to represent characters
+ that cannot be easily typed or have special meanings in programming
+  languages and text editors.
+
+Here are some commonly used escape sequences in programming:    
